@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='uranai.css') }}">
+    <title>占い結果</title>
+</head>
+<body>
+    <h1 class = h1play>今日の運勢は</h1>
+    {% if uranai_result == 1%}
+    <h2>🙀</h2>
+    {% elif uranai_result == 2%}
+    <h2>😿</h2>
+    {% elif uranai_result == 3%}
+    <h2>😺</h2>
+    {% elif uranai_result == 4%}
+    <h2>😸</h2>
+    {% elif uranai_result == 5%}
+    <h2>😻</h2>
+    {% endif %}
+    <figcaption>
+        {{ uranai_comment }}
+    </figcaption>
+</body>
+</html>

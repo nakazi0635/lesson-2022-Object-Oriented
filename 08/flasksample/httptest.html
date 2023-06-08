@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask動作確認フォーム</title>
+</head>
+<body>
+  <h1>Flask動作確認フォーム</h1>
+  <h2>GETメソッドの動作確認</h2>
+  <ol>
+    <li>通常のリクエスト(hello) - <a href="http://localhost:8888/hello">http://localhost:8888/hello</a></li>
+    <li>通常のリクエスト - <a href="http://localhost:8888/">http://localhost:8888/</a></li>
+    <li>パラメータセット - <a href="http://localhost:8888/?hoge=hogehoge&fuga=fugafuga">http://localhost:8888/?hoge=hogehoge&fuga=fugafuga</a></li>
+    <li>フォームから送信 - <br>
+      <form action="http://localhost:8888/" method="get">
+        <div>
+          <label for="input1">hoge:</label>
+          <input type="text" id="input1" name="hoge">
+        </div>
+        <div>
+          <label for="input2">fuga:</label>
+          <input type="text" id="input2" name="fuga">
+        </div>
+        <div>
+          <label for="input3">piyo(number):</label>
+          <input type="number" id="input3" name="piyo">
+        </div>
+        <button type="submit">送信</button>
+      </form>
+    </li>
+    <li>RESTっぽいリクエスト（パラメータなし） - <a href="http://localhost:8888/get/">http://localhost:8888/get/</a></li>
+    <li>RESTっぽいリクエスト（パラメータあり） - <a href="http://localhost:8888/get/Taro">http://localhost:8888/get/Taro</a></li>
+  </ol>
+  <hr>
+  <h2>POSTメソッドの動作確認</h2>
+  <ol>
+    <li>通常のリクエスト(post: methods=["GET", "POST"]の場合、こちらはエラーにならないはず) - <a href="http://localhost:8888/post/">http://localhost:8888/post/</a></li>
+    <li>フォームから送信 - <br>
+      <form action="http://localhost:8888/post/" method="POST">
+        <div>
+          <label for="input1">name:</label>
+          <input type="text" id="input1" name="name">
+        </div>
+        <button type="submit">送信</button>
+      </form>
+    </li>
+    <li>フォームから送信(必要なパラメータが設定されていない場合エラーになる) - <br>
+      <form action="http://localhost:8888/post/" method="POST">
+        <div>
+          <label for="input2">hoge:</label>
+          <input type="text" id="input2" name="hoge">
+        </div>
+        <button type="submit">送信</button>
+      </form>
+    </li>
+  </ol>
+</body>
+</html>

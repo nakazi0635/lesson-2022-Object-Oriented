@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+/*========= レイアウトのためのCSS ===============*/
+body{
+    /* animation: bgchange 20s ease infinite;変化の時間を変更したい場合は20sの部分を好きな時間に変更 */
+    background:#1d1d1d;
+}
+h1{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    scale: 3;
+    color: white;
+}
+h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    scale: 10;
+    color: white;
+}
+p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    color: white;
+}
+figcaption{
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    scale: 3;
+    color: white;
+}
+.birthday{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+}
+.name{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+button{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    scale: 2;
+}
+
+
+@keyframes bgchange{
+    0%   {background:#ffe6e1;}/*変化させたい色*/
+    25%  {background:#fdcb9e;}/*変化させたい色*/
+    50%  {background:#fdcbc1;}/*変化させたい色*/
+    75%  {background:#ffff8c;}/*変化させたい色*/
+    90%  {background:#b2dffb;}/*変化させたい色*/
+    100% {background:#ffe6e1;}/*変化させたい色*/
+}
